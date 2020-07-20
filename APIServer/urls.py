@@ -20,7 +20,7 @@ from django.urls import path
 # Larios
 
 # Miguel
-
+from api.api import UserAPI
 # Sandy
 
 
@@ -31,7 +31,7 @@ urlpatterns = [
     # Larios
 
     # Miguel
-
+    path('register/', UserAPI.as_view(), name = "register")
     # Sandy
 
 ]
