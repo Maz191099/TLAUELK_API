@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     # Larios
 
     # Miguel
-
+    'api',
     # Sandy
 ]
 
