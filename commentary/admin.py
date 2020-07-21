@@ -4,5 +4,6 @@ from .models import Commentary
 
 class CommentaryAdmin(admin.ModelAdmin):
     com_display = ('id','content', 'score')
+    
 
 admin.site.register(Commentary, CommentaryAdmin)

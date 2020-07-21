@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # Jess
-
+from django.urls import include
 # Larios
 
 # Miguel
@@ -27,7 +27,7 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Jess
-
+    path('', include('commentary.urls')),
     # Larios
 
     # Miguel
