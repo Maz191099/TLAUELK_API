@@ -4,4 +4,4 @@ from .models import Commentary
 class CommentarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Commentary
-        field = '__all_'
+        fields ='__all__'
