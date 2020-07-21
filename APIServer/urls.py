@@ -30,7 +30,7 @@ urlpatterns = [
     # Jess
 
     # Larios
-     path('establishment/', include('establecimientos.urls') ),
+     path('', include('establecimientos.urls') ),
     # Miguel
 
     # Sandy
