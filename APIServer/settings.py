@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # Jess
 
     # Larios
-
+    'establecimientos',
     # Miguel
 
     # Sandy
