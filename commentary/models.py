@@ -6,3 +6,6 @@ class Commentary(models.Model):
     
     content = models.TextField()
     score = models.PositiveIntegerField()
+#Configuracion de la funcion __str__ 62
+    def __str__(self):
+        return self.content
