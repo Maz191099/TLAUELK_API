@@ -17,6 +17,8 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=255, verbose_name='Nombre')),
                 ('image', models.ImageField(upload_to='imageprod', verbose_name='Imagen')),
                 ('description', models.TextField(verbose_name='Descripción')),
+                ('precio', models.CharField(max_length=255, verbose_name='Precio')),
+
             ],
             options={
                 'verbose_name': 'Producto',
