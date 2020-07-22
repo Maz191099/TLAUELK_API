@@ -3,6 +3,7 @@ from django.contrib import admin
 from .models import Product
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
+    list_display = ('name', 'image')
+    search_fields = ('name', 'description')
 
 admin.site.register(Product, ProductAdmin)

@@ -5,7 +5,7 @@ from django.db import models
 class Product(models.Model):
     name = models.CharField(max_length=255, verbose_name="Nombre")
     image =models.ImageField(upload_to='imageprod', verbose_name="Imagen")
-    description = models.TextField()
+    description = models.TextField(verbose_name="Descripción")
 
     class Meta:
         verbose_name = "Producto"
