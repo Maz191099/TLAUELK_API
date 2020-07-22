@@ -21,7 +21,7 @@ from django.conf import settings
 # Larios
 
 # Miguel
-
+from django.urls import include
 # Sandy
 
 
@@ -32,7 +32,7 @@ urlpatterns = [
     # Larios
      path('', include('establecimientos.urls') ),
     # Miguel
-
+    path('', include('api.urls')),
     # Sandy
 
 ]
