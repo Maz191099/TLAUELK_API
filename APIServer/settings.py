@@ -49,9 +49,9 @@ INSTALLED_APPS = [
     # Jess
 
     # Larios
-
+    'establecimientos',
     # Miguel
-
+    'api',
     # Sandy
 ]
 
@@ -120,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -136,6 +136,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Media config
+MEDIA_URL = '/image/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'image')
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # 'rest_framework.authentication.BasicAuthentication',
