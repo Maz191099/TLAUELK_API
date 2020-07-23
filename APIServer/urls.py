@@ -20,7 +20,7 @@ from django.urls import include
 # Jess
 
 # Larios
-
+from core import views
 # Miguel
 
 # Sandy
@@ -31,6 +31,8 @@ urlpatterns = [
     path('', include('commentary.urls')),
     # Larios
     path('', include('establecimientos.urls') ),
+    path('', views.home, name="home"),
+    path('accounts/', include('django.contrib.auth.urls') ),
     # Miguel
     path('', include('api.urls')),
     # Sandy
@@ -41,3 +43,4 @@ urlpatterns = [
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

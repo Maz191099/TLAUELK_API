@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'commentary',
     # Larios
     'establecimientos',
+    'core',
     # Miguel
     'api',
     # Sandy
@@ -147,3 +148,7 @@ REST_FRAMEWORK = {
         'knox.auth.TokenAuthentication',
     ]
 }
+#redirect
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
