@@ -6,5 +6,7 @@ from .models import Establishment
 class EstablishmentAdmin(admin.ModelAdmin):
     list_display = ('name','schedule','image')
     search_fields =('name','schedule','direction','description')
+    list_per_page = 10
+
 
 admin.site.register(Establishment, EstablishmentAdmin)

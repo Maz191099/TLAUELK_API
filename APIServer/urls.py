@@ -30,11 +30,11 @@ urlpatterns = [
     # Jess
 
     # Larios
-     path('establishment/', include('establecimientos.urls') ),
+    path('establishment/', include('establecimientos.urls') ),
     # Miguel
 
     # Sandy
-
+    path('apiproducto/', include('producto.urls')),
 ]
 
 # Larios
