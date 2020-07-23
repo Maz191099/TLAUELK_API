@@ -47,12 +47,13 @@ INSTALLED_APPS = [
     'knox',
     'corsheaders',
     # Jess
-
+    'commentary',
     # Larios
     'establecimientos',
     # Miguel
     'api',
     # Sandy
+    'producto',
 ]
 
 MIDDLEWARE = [
@@ -130,7 +131,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -139,6 +139,7 @@ STATIC_URL = '/static/'
 # Media config
 MEDIA_URL = '/image/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'image')
+<<<<<<< HEAD
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # 'rest_framework.authentication.BasicAuthentication',
@@ -146,3 +147,5 @@ REST_FRAMEWORK = {
         'knox.auth.TokenAuthentication',
     ]
 }
+=======
+>>>>>>> a4ae167347b08be8654f44e3a45b3d519574d6b2
