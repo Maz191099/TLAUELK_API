@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'knox',
     'corsheaders',
     # Jess
-
+    'commentary',
     # Larios
     'establecimientos',
     # Miguel

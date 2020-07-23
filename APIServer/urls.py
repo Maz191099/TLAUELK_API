@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 # Jess
-
+from django.urls import include
 # Larios
 
 # Miguel
@@ -28,7 +28,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Jess
-
+    path('', include('commentary.urls')),
     # Larios
     path('establishment/', include('establecimientos.urls') ),
     # Miguel
