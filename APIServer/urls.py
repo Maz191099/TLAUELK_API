@@ -28,7 +28,7 @@ from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Jess
-    path('', include('commentary.urls')),
+    path('commentary/', include('commentary.urls')),
     # Larios
     path('establishment/', include('establecimientos.urls') ),
     # Miguel
