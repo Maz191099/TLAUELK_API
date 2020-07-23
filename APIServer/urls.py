@@ -30,7 +30,11 @@ urlpatterns = [
     # Jess
 
     # Larios
+<<<<<<< HEAD
     path('', include('establecimientos.urls') ),
+=======
+     path('', include('establecimientos.urls') ),
+>>>>>>> larios
     # Miguel
     path('', include('api.urls')),
     # Sandy
