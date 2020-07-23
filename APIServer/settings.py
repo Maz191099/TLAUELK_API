@@ -139,7 +139,7 @@ STATIC_URL = '/static/'
 # Media config
 MEDIA_URL = '/image/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'image')
-<<<<<<< HEAD
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # 'rest_framework.authentication.BasicAuthentication',
@@ -147,5 +147,3 @@ REST_FRAMEWORK = {
         'knox.auth.TokenAuthentication',
     ]
 }
-=======
->>>>>>> a4ae167347b08be8654f44e3a45b3d519574d6b2

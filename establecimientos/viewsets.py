@@ -4,4 +4,4 @@ from .serializer import EstablishmentSerializer
 
 class EstablishmentViewSet(viewsets.ModelViewSet):
     queryset = Establishment.objects.all()
-    serializer_class = EstablishmentSerializer
+    serializer_class = EstablishmentSerializer 
