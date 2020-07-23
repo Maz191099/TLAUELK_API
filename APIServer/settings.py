@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'commentary',
     # Larios
     'establecimientos',
+    'core',
     # Miguel
 
     # Sandy
@@ -138,3 +139,8 @@ STATIC_URL = '/static/'
 # Media config
 MEDIA_URL = '/image/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'image')
+
+#redirect
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
