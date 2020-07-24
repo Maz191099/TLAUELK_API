@@ -11,6 +11,6 @@ class CommentaryViewSet(viewsets.ModelViewSet):
     
     @action(detail=True, methods=['get'])
     def elements(self, request, pk=None):
-        queryset = Commentary.objects.filter(id_establecimiento=pk)
+        queryset = Commentary.objects.filter(id_establecimiento=pk).order_by('-score')
         serializer = CommentarySerializer(queryset,many= True)
         return Response(serializer.data)
