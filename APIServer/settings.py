@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # Larios
     'establecimientos',
     'core',
+    'galeria',
     # Miguel
     'api',
     # Sandy
