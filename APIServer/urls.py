@@ -16,28 +16,31 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
-# Jess
 from django.urls import include
-# Larios
+# Jess
 
+# Larios
+from core import views
 # Miguel
 
 # Sandy
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Jess
-    path('commentary/', include('commentary.urls')),
+    path('', include('commentary.urls')),
     # Larios
-    path('establishment/', include('establecimientos.urls') ),
+    path('', include('establecimientos.urls') ),
+    path('', views.home, name="home"),
+    path('accounts/', include('django.contrib.auth.urls') ),
     # Miguel
-
+    path('', include('api.urls')),
     # Sandy
-    path('apiproducto/', include('producto.urls')),
+    path('', include('producto.urls')),
 ]
 
 # Larios
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
