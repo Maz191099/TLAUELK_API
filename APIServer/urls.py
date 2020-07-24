@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
-# Jess
 from django.urls import include
+# Jess
+
 # Larios
 from core import views
 # Miguel
 
 # Sandy
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,7 +34,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('accounts/', include('django.contrib.auth.urls') ),
     # Miguel
-
+    path('', include('api.urls')),
     # Sandy
     path('', include('producto.urls')),
 ]
