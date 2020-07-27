@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'corsheaders',
     # Jess
     'commentary',
+    'import_export',
     # Larios
     'establecimientos',
     'core',
