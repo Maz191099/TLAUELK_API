@@ -14,24 +14,38 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf import settings
+from django.urls import include
 # Jess
 
 # Larios
-
+from core import views
 # Miguel
 
 # Sandy
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Jess
-
+    path('', include('commentary.urls')),
     # Larios
-
+    path('', include('establecimientos.urls') ),
+    path('', views.home, name="home"),
+    path('accounts/', include('django.contrib.auth.urls') ),
+    path('', include('galeria.urls') ),
     # Miguel
-
+    path('', include('api.urls')),
     # Sandy
-
+    path('', include('producto.urls')),
 ]
+
+# Larios
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+#Configuraciones para titulos en el admin
+admin.site.site_header = "TLAKUALI UELIK"
+admin.site.index_title = "Panel administrativo"
+admin.site.site_title = "Tlakuali Uelik"
