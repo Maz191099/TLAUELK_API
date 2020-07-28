@@ -5,3 +5,4 @@ class EstablishmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Establishment
         fields ='__all__'
+        

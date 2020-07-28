@@ -37,6 +37,10 @@ CORS_ORIGIN_WHITELIST = [
 # Application definition
 
 INSTALLED_APPS = [
+   # General use templates & template tags (should appear first)
+    'adminlte3',
+     # Optional: Django admin theme (must be before django.contrib.admin)
+    'adminlte3_theme',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,12 +51,16 @@ INSTALLED_APPS = [
     'knox',
     'corsheaders',
     # Jess
-
+    'comentario',
+    'import_export',
     # Larios
     'establecimientos',
+    'core',
+    'galeria',
     # Miguel
     'api',
     # Sandy
+    'producto',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +79,8 @@ ROOT_URLCONF = 'APIServer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        #'DIRS':[os.path.join(BASE_DIR,'templates')],
+        'DIRS':[],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,6 +89,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            #'libraries': { # Adding this section should work around the issue.
+            #'staticfiles' : 'django.templatetags.static',
+            #},
         },
     },
 ]
@@ -92,8 +104,12 @@ WSGI_APPLICATION = 'APIServer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ba2mcfainc5gkuzmcgdv',
+        'USER': 'uquvlif8a5dtg20t',
+        'PASSWORD': '5aitkspnGvWXcOXq8Ahy',
+        'HOST': 'ba2mcfainc5gkuzmcgdv-mysql.services.clever-cloud.com',
+        'PORT': '3306',
     }
 }
 
@@ -130,7 +146,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -146,3 +161,7 @@ REST_FRAMEWORK = {
         'knox.auth.TokenAuthentication',
     ]
 }
+#redirect
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
