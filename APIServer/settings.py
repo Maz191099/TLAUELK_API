@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'knox',
     'corsheaders',
     # Jess
-    'commentary',
+    'comentario',
+    'import_export',
     # Larios
     'establecimientos',
     'core',

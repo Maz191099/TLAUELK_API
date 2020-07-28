@@ -18,5 +18,3 @@ class Commentary(models.Model):
 #Configuracion de la funcion __str__ 62
     def __str__(self):
         return self.content
-
-    
