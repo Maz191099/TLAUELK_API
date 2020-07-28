@@ -28,7 +28,7 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Jess
-    path('', include('commentary.urls')),
+    path('', include('comentario.urls')), 
     # Larios
     path('', include('establecimientos.urls') ),
     path('', views.home, name="home"),

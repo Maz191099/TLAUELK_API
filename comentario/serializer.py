@@ -5,3 +5,4 @@ class CommentarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Commentary
         fields ='__all__'
+        
