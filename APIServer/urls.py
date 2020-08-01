@@ -34,6 +34,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('accounts/', include('django.contrib.auth.urls') ),
     path('', include('galeria.urls') ),
+    path('', include('promociones.urls') ),
     # Miguel
     path('', include('api.urls')),
     # Sandy
