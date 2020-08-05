@@ -54,22 +54,22 @@
 
                     <div class="col-md-4 col-sm-6 model-box">
 
-                        <div class="info-box bg-red">
-                                
-                            <span class="info-box-icon">
+                        <div class="info-box bg-orange">
+                           <!--     
+                            <span class="info-box-icon" style="color:white">
                                 <a href="{{ model.admin_url }}">{% autoescape off %}{% icon %}{% endautoescape %}</a>
                             </span>
-                        
+                        -->
                             <div class="info-box-content">
                                 <a href="{{ model.admin_url }}">
-                                    <span class="info-box-text text-light">{{ model.name }}</span>
+                                    <span class="info-box-text text-light" >{{ model.name }}</span>
                                 </a>
                                 {% if model.add_url %}
                                 <a href="{{ model.add_url }}" class="btn btn-default btn-xs btn-block"><i
-                                        class="fa fa-plus"></i> {%trans 'Agregar' %}</a>
+                                        class="fa fa-plus" ></i> {%trans 'Agregar' %}</a>
                                 {% endif %}
                                 {% if model.admin_url %}
-                                <a href="{{ model.admin_url }}" class="btn btn-warning btn-xs btn-block"><i
+                                <a href="{{ model.admin_url }}" class="btn btn-secondary btn-xs btn-block"><i
                                         class="fa fa-pencil"></i>
                                     {%trans 'Cambiar' %}</a>
                                 {% endif %}
@@ -130,8 +130,8 @@
 
         <div class="card card-widget col-md-12">
             <div class="card-header ">
-                <h2 class="card-title">{% trans 'Recent actions' %} / </h2>
-                <h3 class="card-title"> {% trans 'My actions' %}</h3>
+                <h2 class="card-title">{% trans 'Acciones recientes' %} / </h2>
+                <h3 class="card-title"> {% trans 'Mis accioness' %}</h3>
                 <h3 class="card-title"><a href="{{ app.app_url }}" class="nav-link"
                         title="{% blocktrans with name=app.name %}Models in the {{ name }} application{% endblocktrans %}">{{ app.name }}</a>
                 </h3>

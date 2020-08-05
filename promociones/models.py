@@ -8,3 +8,7 @@ class Promotions(models.Model):
     class Meta:
         verbose_name = "Promocion"
         verbose_name_plural ="Promociones"
+
+#Configuracion de la funcion __str__ 62
+    def __str__(self):
+        return self.description
