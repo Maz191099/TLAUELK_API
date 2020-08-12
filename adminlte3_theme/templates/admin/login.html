@@ -39,10 +39,14 @@
         {% endif %}
         <div class="row">
             <!-- /.col -->
+            
             <div class="col-xs-4">
+                <center> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
                 <button type="submit"
-                        class="btn btn-warning btn-block btn-flat">{% trans 'Log In' %}</button>
-                        
+                        class="btn btn-warning">{% trans 'Ingresar' %}</button>
+                        &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
+                         <a class="btn btn-danger" href="/">Cancelar</a>
+                </center>
             </div>
             <!-- /.col -->
         </div>
@@ -52,8 +56,8 @@
     {% if user.is_authenticated %}
         <p class="alert alert-danger">
             {% blocktrans trimmed %}
-                You are authenticated as {{ username }}, but are not authorized to
-                access this page. Would you like to login to a different account?
+                Estás autenticado como  {{ username }}, pero no están autorizados a
+                acceder a esta página ¿Desea iniciar sesión en una cuenta diferente?
             {% endblocktrans %}
         </p>
     {% endif %}

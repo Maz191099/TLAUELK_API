@@ -6,18 +6,18 @@
 {% load static %}
             {% if request.user.is_authenticated %}
             <li class="nav-item dropdown user-menu">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true" >
                   <img src="{% static 'core/img/user2.png' size=128 %}" class="user-image img-circle elevation-2" alt="User Image">
                   <span class="d-none d-md-inline" style="color:white">{% firstof request.user.get_short_name request.user.get_username %}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                   <!-- User image -->
-                  <li class="user-header bg-red">
+                  <li class="user-header bg-orange">
                     <img src="{% static 'core/img/user2.png' size=160 %}" class="img-circle elevation-2" alt="User Image">
         
-                    <p>
-                        {% firstof request.user.get_short_name request.user.get_username %} - {% firstof request.user.get_role %}
-                      <small>Ingreso : {{ request.user.date_joined }}</small>
+                    <p  style="color:white">
+                        {% firstof request.user.get_short_name request.user.get_username %}  {% firstof request.user.get_role %}
+                      <small style="color:white">Ingreso : {{ request.user.date_joined }}</small>
                     </p>
                   </li>
                   

@@ -6,8 +6,18 @@
         {% load static %}
     </head>
     <body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-                <a class="navbar-brand" href="">Api Tlakuali Uelik</a>
+
+{% block extrastyle %}
+    <style>
+      .loginS  {
+    background-color: #ff6704;
+    color: white;   
+    }
+    </style>
+{% endblock %}  
+
+   <nav class="navbar navbar-expand-lg" style="background-color: #ff6704;">
+                <a class="navbar-brand" href="" style="color: #fff;">Api Tlakuali Uelik</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -15,20 +25,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/" style="color: #fff;">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     {% if  request.user.is_staff %}
                         <li class="nav-item active">
-                            <a class="nav-link" href="admin/">Admin <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="admin/" style="color: #fff;">Admin <span class="sr-only">(current)</span></a>
                         </li>
                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">
                         API REST
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         
                             <a class="dropdown-item" href="establishment/" target="_blank">Establecimientos</a>
                             <a class="dropdown-item" href="producto/" target="_blank">Productos</a>
+                            <a class="dropdown-item" href="promotions/" target="_blank">Promociones</a>
                             <a class="dropdown-item" href="commentary/" target="_blank">Comentarios</a>
                             <a class="dropdown-item" href="gallery/" target="_blank">Galeria</a>
                         
@@ -39,7 +50,7 @@
                     {% if request.user.is_authenticated %}
                         <ul class="navbar-nav">
                         <li>
-                            <a class="nav-link active"href="{% url 'logout' %}">Salir</a>
+                            <a class="nav-link active"href="{% url 'logout' %}" style="color: #fff;">Salir</a>
                         </li>
                         </ul>
                     {% endif %}
@@ -49,7 +60,7 @@
             <table>
             
                 <tr><td><img src="{% static 'core/img/logo.png' %}" width="100%" height="45%" /></td>
-                     <td width="40%">  <a class="btn btn-danger btn-lg btn-block" href="admin">Iniciar sesion</a> </td>
+                     <td width="40%">  <a class="btn btn-lg btn-block loginS" href="admin">Iniciar sesion</a> </td>
                     <td width="10%"><td>
                      </tr>
             </table>

@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'establecimientos',
     'core',
     'galeria',
+    'promociones',
     # Miguel
     'api',
     # Sandy
